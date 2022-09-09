@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IBlog } from 'src/app/interfaces/blog';
 
 @Component({
   selector: 'app-blog-card',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogCardComponent implements OnInit {
 
+  @Input() blog:IBlog
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.blog)
   }
 
 }

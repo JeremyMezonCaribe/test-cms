@@ -1,14 +1,16 @@
 <article class="rounded-lg shadow-sm w-96 bg-white overflow-hidden">
+    <a [href]="'/blog/'+blog.attributes.slug">
     <div class="flex w-full object-fill h-40 overflow-hidden">
-        <img src="https://imagenes.elpais.com/resizer/iB1yqaFfOrmwMmQXcZpqvE-2oGY=/414x311/cloudfront-eu-central-1.images.arcpublishing.com/prisa/CJCEBJ3V3IZWZYW6B2VOGMFMGA.jpg" class="w-full h-auto" alt="" />
+        <img [src]="blog.attributes.imagen" class="w-full h-auto" alt="" />
     </div>
     <div class="p-4">
         <div class="mb-3">
-            <h4 class="text-xl font-bold">Titulo del blog</h4>
+            <h4 class="text-xl font-bold">{{blog.attributes.nombre}}</h4>
             <small>keywords</small>
         </div>
-        <p class="text-sm">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sit mollitia, deserunt facilis dolorem laborum optio quasi numquam dicta quos amet aut quidem sint accusamus sapiente iure nam saepe aperiam.
-        </p>
+        <!-- <p class="text-sm">
+            
+        </p> -->
     </div>
+</a>
 </article>

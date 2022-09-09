@@ -1,13 +1,9 @@
-<section class="h-40 flex justify-center items-center">
-    <h1 class="font-light text-4xl text-center">CMS TEST</h1>
-</section>
-
 <main class="bg-slate-50">
     <section class="container mx-auto py-5">
         <div class="flex justify-between">
-            <app-blog-card></app-blog-card>
-            <app-blog-card></app-blog-card>
-            <app-blog-card></app-blog-card>
+            <div *ngFor="let blog of blogs">
+                <app-blog-card [blog]="blog"></app-blog-card>
+            </div>
         </div>
         
     </section>

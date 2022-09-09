@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IBlog } from 'src/app/interfaces/blog';
+import { BlogsService } from 'src/app/services/blogs.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  blogs:IBlog;
 
-  ngOnInit(): void {
+  constructor(private blogService:BlogsService) { }
+
+  async ngOnInit(): Promise<void> {
+    this.blogs = await this.blogService.getAllBlogs()
+
   }
 
 }
